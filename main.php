@@ -1,21 +1,25 @@
-<?php 
+﻿<?php 
 /* Main page with two forms: sign up and log in */
 require 'db.php';
 session_start();
+session_regenerate_id();
+ob_start();
 ?>
+
 <!DOCTYPE html>
 <html>
+    <link href="css/style.css" rel ="stylesheet" media="screen">
 <head>
-  <title>Add New</title>
+  <title>Sign-Up/Login Form</title>
   <?php include 'css/css.html'; ?>
 </head>
 
 <?php 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') 
 {
-    if (isset($_POST['delete_user'])) { //user logging in
+    if (isset($_POST['login'])) { //user logging in
 
-        require 'delete_php.php';
+        require 'login.php';
         
     }
     
@@ -29,20 +33,37 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
 <body>
   <div class="form">
       
-       
-             <div id="delete">   
-          <h1>Delete User!</h1>
+      <!--
+      <ul class="tab-group">
+        <li class="tab"><a href="#signup">Sign Up</a></li>
+        <li class="tab active"><a href="#login">Log In</a></li>
+      </ul>
+      
+      <div class="tab-content">
+      -->
+
+         <div id="login">   
+          <h1>Welcome Back!</h1>
           
-          <form action="delete.php" method="post" autocomplete="off"> 
-              <div class="field-wrap">
+          <form action="main.php" method="post" autocomplete="off">
+          
+            <div class="field-wrap">
             <label>
-              Enter the email address of user to remove<span class="req">*</span>
+              Email Address<span class="req">*</span>
             </label>
             <input type="email" required autocomplete="off" name="email"/>
           </div>
-              
-           
-          <button class="button button-block" name="delete_user" />Delete</button>
+          <!--
+          <div class="field-wrap">
+            <label>
+              Password<span class="req">*</span>
+            </label>
+            <input type="password" required autocomplete="off" name="password"/>
+          </div>
+          
+          <p class="forgot"><a href="forgot.php">Forgot Password?</a></p>
+          -->
+          <button class="button button-block" name="login">Log In</button>
           
           </form>
 
