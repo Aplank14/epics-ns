@@ -10,11 +10,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
         
     }
     
-    elseif (isset($_POST['register'])) { //user registering
-        
-        require 'register.php';
-        
-    }
 }
 ?>
 <!DOCTYPE html>
