@@ -1,16 +1,7 @@
 <?php 
 /* Main page with two forms: sign up and log in */
-require 'db.php';
+require_once 'db.php';
 session_start();
-?>
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Add New</title>
-  <?php include 'css/css.html'; ?>
-</head>
-
-<?php 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') 
 {
     if (isset($_POST['modify_user'])) { //user logging in
@@ -26,6 +17,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
     }
 }
 ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modify user</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
 <body>
   <div class="form">
       
@@ -48,48 +48,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
 
         </div>
           
-        <!--
-          <div id="signup">   
-          <h1>Sign Up for Free</h1>
-          
-          <form action="main.php" method="post" autocomplete="off">
-          
-          <div class="top-row">
-            <div class="field-wrap">
-              <label>
-                First Name<span class="req">*</span>
-              </label>
-              <input type="text" required autocomplete="off" name='firstname' />
-            </div>
-        
-            <div class="field-wrap">
-              <label>
-                Last Name<span class="req">*</span>
-              </label>
-              <input type="text"required autocomplete="off" name='lastname' />
-            </div>
-          </div>
-        
-
-          <div class="field-wrap">
-            <label>
-              Email Address<span class="req">*</span>
-            </label>
-            <input type="email"required autocomplete="off" name='email' />
-          </div>
-          
-          <div class="field-wrap">
-            <label>
-              Set A Password<span class="req">*</span>
-            </label>
-            <input type="password"required autocomplete="off" name='password'/>
-          </div>
-          
-          <button type="submit" class="button button-block" name="register" />Register</button>
-          
-          </form>
-
-        </div>  -->
         
       </div><!-- tab-content -->
       
