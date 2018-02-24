@@ -1,26 +1,29 @@
 <?php
-/* Displays all successful messages */
-session_start();
+	session_start();
+	$success = "Success";
+	if(isset($_SESSION['message'])){  
+       $success = $_SESSION['message'];
+    }
+
 ?>
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-  <title>Success</title>
-  <?php include 'css/css.html'; ?>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Success</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 <div class="form">
-    <h1><?= 'Success'; ?></h1>
+    <h1>Success</h1>
     <p>
-    <?php 
-    if( isset($_SESSION['message']) AND !empty($_SESSION['message']) ):
-        echo $_SESSION['message'];    
-    else:
-        header( "location: main.php" );
-    endif;
-    ?>
+		<?=$success?>
     </p>
-    <a href="main.php"><button class="button button-block"/>Home</button></a>
+    <a href="adminlogin.php"><button class="button button-block"/>Admin Home</button></a>
 </div>
 </body>
 </html>

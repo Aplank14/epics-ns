@@ -1,24 +1,29 @@
 <?php
-/* Displays all error messages */
 session_start();
+/* Displays all error messages */
+$error = "Unexpected Error";
+    if(isset($_SESSION['message']) ){
+    
+        $error = $_SESSION['message'];
+    }
+session_unset();
+session_destroy();
 ?>
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Error</title>
-  <?php include 'css/css.html'; ?>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 <div class="form">
     <h1>Error</h1>
     <p>
-    <?php 
-    if( isset($_SESSION['message']) AND !empty($_SESSION['message']) ): 
-        echo $_SESSION['message'];    
-    else:
-        header( "location: main.php" );
-    endif;
-    ?>
+        <?=$error?>
     </p>     
     <a href="main.php"><button class="button button-block"/>Home</button></a>
 </div>

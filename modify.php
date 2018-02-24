@@ -1,19 +1,20 @@
 <?php 
-/* Main page with two forms: sign up and log in */
 require_once 'db.php';
 session_start();
 if ($_SERVER['REQUEST_METHOD'] == 'POST') 
 {
-    if (isset($_POST['modify_user'])) { //user logging in
+    if (isset($_POST['modify_user'])) {
 
-        require 'change_info_php.php';
+        require_once 'modify_php.php';
         
     }
     
 }
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -44,10 +45,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
         </div>
           
         
-      </div><!-- tab-content -->
+      </div>
       
-</div> <!-- /form -->
-  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+</div>  
 
     <script src="js/index.js"></script>
 

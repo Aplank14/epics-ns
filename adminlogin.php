@@ -18,39 +18,39 @@ else {
 }
 ?>
 
-    <!DOCTYPE html>
-    <html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Admin Login</title>
-        <link rel="stylesheet" href="css/style.css">
-    </head>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
 
-    <body>
-        <div class="form">
+<body>
+    <div class="form">
 
-            <h1>Welcome Admin</h1>
-            <h2>
-                <?="$first_name $last_name"?>
-            </h2>
+        <h1>Welcome Admin</h1>
+        <h2>
+            <?="$first_name $last_name"?>
+        </h2>
 
 
 
-            <a href="add_new.php"><button class="button button-block" name="add_new">Add New</button></a>
-            <br>
-            <a href="modify.php"><button class="button button-block" name="modify">Modify</button></a>
-            <br>
-            <a href="delete.php"><button class="button button-block" name="delete">Delete</button></a>
-            <br>
-            <a href="logout.php"><button class="button button-block" name="logout">Log Out</button></a>
+        <a href="add_new.php"><button class="button button-block" name="add_new">Add New</button></a>
+        <br>
+        <a href="modify.php"><button class="button button-block" name="modify">Modify</button></a>
+        <br>
+        <a href="delete.php"><button class="button button-block" name="delete">Delete</button></a>
+        <br>
+        <a href="logout.php"><button class="button button-block" name="logout">Log Out</button></a>
 
-        </div>
+    </div>
 
-        <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-        <script src="js/index.js"></script>
+        
+    <script src="js/index.js"></script>
 
-    </body>
+</body>
 
-    </html>
+</html>

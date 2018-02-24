@@ -1,26 +1,30 @@
 <?php 
-/* Main page with two forms: sign up and log in */
-require 'db.php';
+require_once 'db.php';
 session_start();
-?>
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Add New</title>
-  <?php include 'css/css.html'; ?>
-</head>
 
-<?php 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') 
 {
-    if (isset($_POST['delete_user'])) { //user logging in
+    if (isset($_POST['delete_user']))
 
-        require 'delete_php.php';
+        require_once 'delete_php.php';
         
     }
     
 }
+
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete User</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+
 <body>
   <div class="form">
       
@@ -30,10 +34,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
           
           <form action="delete.php" method="post" autocomplete="off"> 
               <div class="field-wrap">
-            <label>
-              Enter the email address of user to remove<span class="req">*</span>
-            </label>
-            <input type="email" required autocomplete="off" name="email"/>
+            <input type="email" autocomplete="off" name="email" placeholder="Email of the user to delete" required/>
           </div>
               
            
@@ -44,11 +45,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
         </div>
           
         
-      </div><!-- tab-content -->
+      </div>
       
 </div> <!-- /form -->
-  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-
+  
     <script src="js/index.js"></script>
 
 </body>
