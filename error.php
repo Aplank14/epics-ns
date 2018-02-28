@@ -1,17 +1,23 @@
 <?php
+
 session_start();
-/* Displays all error messages */
 $error = "Unexpected Error";
-    if(isset($_SESSION['message']) ){
+
+if(isset($_SESSION['message']))
+{
     
-        $error = $_SESSION['message'];
-    }
+    $error = $_SESSION['message'];
+    
+}
+
 session_unset();
 session_destroy();
+
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,12 +26,17 @@ session_destroy();
 </head>
 
 <body>
-<div class="form">
-    <h1>Error</h1>
-    <p>
-        <?=$error?>
-    </p>     
-    <a href="main.php"><button class="button button-block"/>Home</button></a>
-</div>
+    
+    <div class="form">
+        
+        <h1>Error</h1>
+    
+        <p><?=$error?></p>
+        
+        <a href="main.php"><button class="button button-block">Home</button></a>
+    
+    </div>
+    
 </body>
+
 </html>

@@ -1,15 +1,15 @@
 <?php 
+
 require_once 'db.php';
 session_start();
-if ($_SERVER['REQUEST_METHOD'] == 'POST') 
-{
-    if (isset($_POST['modify_user'])) {
 
-        require_once 'modify_php.php';
-        
-    }
+if (isset($_POST['modify_user']))
+{
+    
+    require 'change_info.php';
     
 }
+
 ?>
 
 <!DOCTYPE html>
@@ -23,33 +23,31 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
 </head>
 
 <body>
-  <div class="form">
-      
-       
-             <div id="modify">   
-          <h1>Modify User!</h1>
-          
-          <form action="change_info.php" method="post" autocomplete="off"> 
-              <div class="field-wrap">
-            <label>
-              Enter the email address of user to modify<span class="req">*</span>
-            </label>
-            <input type="email" required autocomplete="off" name="email"/>
-          </div>
-              
-           
-          <button class="button button-block" name="modify_user" />Modify</button>
-          
-          </form>
+    
+    <div class="form">
+
+        <div id="modify">
+    
+            <h1>Modify User!</h1>
+
+            <form action="change_info.php" method="post" autocomplete="off">
+            
+                <div class="field-wrap">
+                
+                    <input type="email" autocomplete="off" name="email" placeholder="Enter the email address" required />
+                
+                </div>
+
+                <button class="button button-block" name="modify_user">Modify</button>
+
+            </form>
 
         </div>
-          
-        
-      </div>
-      
-</div>  
+
+    </div>
 
     <script src="js/index.js"></script>
 
 </body>
+
 </html>

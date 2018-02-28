@@ -1,9 +1,12 @@
 <?php
-	session_start();
-	$success = "Success";
-	if(isset($_SESSION['message'])){  
-       $success = $_SESSION['message'];
-    }
+
+session_start();
+$success = "Success";
+
+if(isset($_SESSION['message']))
+{  
+   $success = $_SESSION['message'];
+}
 
 ?>
 
@@ -18,12 +21,17 @@
 </head>
 
 <body>
-<div class="form">
-    <h1>Success</h1>
-    <p>
-		<?=$success?>
-    </p>
-    <a href="adminlogin.php"><button class="button button-block"/>Admin Home</button></a>
-</div>
+    
+    <div class="form">
+        
+        <h1>Success</h1>
+        
+        <p><?=$success?></p>
+        
+        <a href="adminlogin.php"><button class="button button-block">Admin Home</button></a>
+    
+    </div>
+
 </body>
+
 </html>
