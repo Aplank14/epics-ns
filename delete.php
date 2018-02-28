@@ -49,8 +49,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
 
     </div>
 
-    <script src="js/index.js"></script>
-
 </body>
 
 </html>

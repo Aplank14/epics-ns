@@ -41,8 +41,6 @@ $mysqli->query($update);
 
     </div>
 
-    <script src="js/index.js"></script>
-
 </body>
 
 </html>

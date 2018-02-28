@@ -21,7 +21,6 @@ if (isset($_POST['change_info'])) {
     
     require_once 'modify_php.php';
 
-    
 }
 
 ?>
@@ -47,7 +46,6 @@ if (isset($_POST['change_info'])) {
             <form action="modify_php.php" method="post" autocomplete="off">
 
                 <div class="field-wrap">
-
                     <input type="number" autocomplete="off" name="id" value=<?="$id" ?> required/>
                 </div>
 
@@ -62,6 +60,7 @@ if (isset($_POST['change_info'])) {
                 <div class="field-wrap">
                     <input type="email" autocomplete="off" name="email" value=<?="$email" ?> required/>
                 </div>
+
                 <div class="field-wrap">
                     <input type="text" autocomplete="off" name="user_type" value=<?="$user_type" ?> required/>
                 </div>
@@ -72,11 +71,7 @@ if (isset($_POST['change_info'])) {
 
         </div>
 
-
-    </div>
-
-
-    <script src="js/index.js"></script>
+    </div>    
 
 </body>
 

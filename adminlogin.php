@@ -33,9 +33,8 @@ $mysqli->query($update);
     <div class="form">
 
         <h1>Welcome Admin</h1>
-        <h2>
-            <?="$first_name $last_name"?>
-        </h2>
+        
+        <h2><?="$first_name $last_name"?></h2>
 
         <a href="add_new.php"><button class="button button-block" name="add_new">Add New</button></a>
         <br>
@@ -48,8 +47,6 @@ $mysqli->query($update);
         <a href="logout.php"><button class="button button-block" name="logout">Log Out</button></a>
 
     </div>
-
-    <script src="js/index.js"></script>
 
 </body>
 

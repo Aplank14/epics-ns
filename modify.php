@@ -6,7 +6,7 @@ session_start();
 if (isset($_POST['modify_user']))
 {
     
-    require 'change_info.php';
+    require_once 'change_info.php';
     
 }
 
@@ -32,10 +32,8 @@ if (isset($_POST['modify_user']))
 
             <form action="change_info.php" method="post" autocomplete="off">
             
-                <div class="field-wrap">
-                
+                <div class="field-wrap">                
                     <input type="email" autocomplete="off" name="email" placeholder="Enter the email address" required />
-                
                 </div>
 
                 <button class="button button-block" name="modify_user">Modify</button>
@@ -45,8 +43,6 @@ if (isset($_POST['modify_user']))
         </div>
 
     </div>
-
-    <script src="js/index.js"></script>
 
 </body>
 

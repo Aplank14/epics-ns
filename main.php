@@ -8,6 +8,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
      require_once 'login.php';
     
 }
+
 ?>
 
 
@@ -43,10 +44,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
 
         </div>
 
-
     </div>
-
-    <script src="js/index.js"></script>
+    
 
 </body>
 

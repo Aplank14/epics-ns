@@ -23,9 +23,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
 
 
 <body>
+    
     <div class="form">
 
         <div id="add">
+    
             <h1>Add New User!</h1>
 
             <form action="add_new.php" method="post" autocomplete="off">
@@ -56,9 +58,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
 
         </div>
 
-
     </div>
-    <script src="js/index.js"></script>
 
 </body>
 
