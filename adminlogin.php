@@ -11,7 +11,7 @@ if ( $_SESSION['logged_in'] != 1 ) {
 $first_name = $_SESSION['first_name'];
 $last_name = $_SESSION['last_name'];
 $email = $_SESSION['email'];
-$time_stamp = date("Y-m-d H:i:s");
+$time_stamp = date("Y-m-d H:i:s", time());
 
 $update = "UPDATE $db.users SET login_time = '$time_stamp' WHERE email =  '$email'";
 $mysqli->query($update);

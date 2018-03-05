@@ -1,8 +1,7 @@
 <?php
 
 $email = $mysqli->escape_string($_POST['email']);
-$test = "SELECT * FROM" . $_SESSION['db'] . ".users WHERE email='" . $email . "'";
-$result = $mysqli->query("SELECT * FROM " . $_SESSION['db'] . ".users WHERE email='" . $email . "'");
+$result = $mysqli->query("SELECT * FROM $db.users WHERE email='$email'");
 
 if ($result->num_rows == 0){
     $_SESSION['message'] = "User with that email doesn't exist!";
@@ -17,7 +16,6 @@ if($user['user_type']=="admin")
     $curr_email = $user['email'];
     $_SESSION['first_name'] = $user['first_name'];
     $_SESSION['last_name'] = $user['last_name'];
-
     $_SESSION['logged_in'] = true;
 
     header("location: adminlogin.php");
@@ -28,7 +26,6 @@ else if($user['user_type']=="user")
     $curr_email = $user['email'];
     $_SESSION['first_name'] = $user['first_name'];
     $_SESSION['last_name'] = $user['last_name'];
-
     $_SESSION['logged_in'] = true;
 
     header("location: profile.php");

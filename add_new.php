@@ -2,11 +2,14 @@
 
 session_start();
 
+if ( $_SESSION['logged_in'] != 1 ) {
+	$_SESSION['message'] = "You must log in";
+	header("location: error.php");    
+}
+
 if ($_SERVER['REQUEST_METHOD'] == 'POST') 
 {
-
-    require_once 'add_new_php.php';
-        
+    require_once 'add_new_php.php';       
 }
 
 ?>

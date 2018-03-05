@@ -1,12 +1,12 @@
 ﻿<?php 
 
 session_start();
+session_unset();
 require_once('db.php');
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') 
 {
-     require_once 'login.php';
-    
+     require_once 'login.php';    
 }
 
 ?>
@@ -44,6 +44,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
 
         </div>
 
+    </div>
+    
+    <div class="form">
+    
+        <a href="view.php"><button class="button button-block" name="checkout">Check Out</button></a>
+        
     </div>
     
 

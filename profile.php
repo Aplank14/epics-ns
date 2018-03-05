@@ -17,6 +17,9 @@ $time_stamp = date("Y-m-d H:i:s");
 $update = "UPDATE $db.users SET login_time = '$time_stamp' WHERE email =  '$email'";
 $mysqli->query($update);
 
+session_unset();
+session_destroy(); 
+
 ?>
 
 <!DOCTYPE html>
@@ -32,12 +35,16 @@ $mysqli->query($update);
 <body>
     
     <div class="form">
-
-        <h1>Welcome User</h1>
-       
-        <h2><?= $first_name.' '.$last_name ?></h2>
-
-        <a href="logout.php"><button class="button button-block" name="logout">Log Out</button></a>
+  
+        <h1>
+            You have been checked in 
+            <br>
+            <?= $first_name.' '.$last_name ?>
+        </h1>
+              
+        <p>Don't forget to check out when you go!</p>
+          
+        <a href="main.php"><button class="button button-block">Home</button></a>
 
     </div>
 

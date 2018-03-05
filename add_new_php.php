@@ -29,5 +29,4 @@ else
     header("location: error.php"); 
 }
 
-
 ?>
