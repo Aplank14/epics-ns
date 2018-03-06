@@ -3,6 +3,8 @@
 require_once "db.php";
 session_start();
 
+$result = $mysqli->query("SELECT id, first_name, last_name, email, user_type, hours FROM $db.users")
+
 ?>
 
 <!DOCTYPE html>
@@ -27,6 +29,18 @@ session_start();
                 <td>Email</td>
                 <td>Hours</td>
             </tr>
+            <?php
+                
+                while($row = $result->fetch_assoc()) {
+                    echo "<tr>";
+                    if ($row['user_type']=='admin'){
+                        continue;
+                    }
+                    $output = "<td>$row[id]</td><td>$row[first_name] $row[last_name]</td><td>$row[email]</td><td>$row[hours]</td>";
+                    echo $output;
+                    echo "<tr>";
+                }
+            ?>
         </table>
 
         <hr>

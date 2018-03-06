@@ -36,25 +36,30 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
             <form action="add_new.php" method="post" autocomplete="off">
 
                 <div class="field-wrap">
-                    <input type="number" required autocomplete="off" name="id" placeholder="ID*" required/>
+                    <input type="number" autocomplete="off" name="id" placeholder="ID*" required>
                 </div>
 
                 <div class="field-wrap">
-                    <input type="text" required autocomplete="off" name="first_name" placeholder="First Name*" required/>
+                    <input type="text" autocomplete="off" name="first_name" placeholder="First Name*" required>
                 </div>
 
                 <div class="field-wrap">
-                    <input type="text" required autocomplete="off" name="last_name" placeholder="Last Name*" required/>
+                    <input type="text" autocomplete="off" name="last_name" placeholder="Last Name*" required>
                 </div>
 
                 <div class="field-wrap">
-                    <input type="email" required autocomplete="off" name="email" placeholder="Email Address*" required/>
+                    <input type="email" autocomplete="off" name="email" placeholder="Email Address*" required>
                 </div>
 
                 <div class="field-wrap">
-                    <input type="text" required autocomplete="off" name="user_type" placeholder="User Type*" required/>
+                    <input type="text" required autocomplete="off" name="user_type" value="user" required>
                 </div>
 
+                <!--<div class="field-wrap">
+                    <input type="radio" name="user_type" value="admin" checked>Admin
+                    <input type="radio" name="user_type" value="user">User
+                </div>-->
+                
                 <button class="button button-block" name="add_new">Add</button>
 
             </form>

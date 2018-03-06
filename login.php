@@ -10,7 +10,11 @@ if ($result->num_rows != 1){
 
 $user = $result->fetch_assoc();
 
-if($user['user_type']=="admin")
+if($user['logged_in']){
+    $_SESSION['message'] = "User already logged in!";
+    header("location: error.php");
+}
+else if($user['user_type']=="admin")
 {    
     $_SESSION['email'] = $user['email'];
     $curr_email = $user['email'];

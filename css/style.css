@@ -67,6 +67,21 @@ a:hover {
   display: none;
 }
 
+table{
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 10px;
+    color: white;
+}
+
+td{
+    color: white;
+}
+
+tr{
+    color: white;
+}
+
 h1 {
   text-align: center;
   color: #ffffff;
