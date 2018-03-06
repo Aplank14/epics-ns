@@ -38,17 +38,20 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
                 
                 </div>
 
-                <button class="button button-block" name="login">Log In</button>
+                <button class="button button-block" name="login">Check In</button>
 
             </form>
 
         </div>
 
-    </div>
-    
-    <div class="form">
-    
-        <a href="view.php"><button class="button button-block" name="checkout">Check Out</button></a>
+        <br>
+        <br>
+        <hr>
+        <br>
+        
+        <h1>Leaving?</h1>
+        
+        <a href="checkout.php"><button class="button button-block" name="checkout">Check Out</button></a>
         
     </div>
     

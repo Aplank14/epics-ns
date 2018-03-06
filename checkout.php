@@ -3,7 +3,7 @@
 require_once "db.php";
 session_start();
 
-$result = $mysqli->query("SELECT "first_name" FROM $db.users WHERE logged_in=1");
+$result = $mysqli->query("SELECT * FROM $db.users WHERE logged_in=1");
 
 ?>
 
@@ -21,20 +21,23 @@ $result = $mysqli->query("SELECT "first_name" FROM $db.users WHERE logged_in=1")
 
     <div class="form">
 
-        <h1>Users</h1>
-        <table>
-            <tr>
-                <td>Name</td>
-                <td></td>
-            </tr>
-            <?=
-                if ($result->num_rows > 0) {
+        <h1>Current Users</h1>
+        <form action="checkout_php.php" method="post">
+        
+        <?php
+            if ($result->num_rows > 0) {
                 while($row = $result->fetch_assoc()) {
-                echo "<br> $row['first_name']";
+                    $output = '<input class = "button button-block" type="submit" value="'. $row['first_name'] . ' ' . $row['last_name'] . '" name="' . $row['id']. '">';
+                    echo $output;
                 }
-            ?>
-        </table>
-
+            }
+        ?>
+              
+        </form>
+        
+        <br>
+        <hr>
+        <a href="main.php"><button class="button button-block">Back</button></a>
         
     </div>
 
