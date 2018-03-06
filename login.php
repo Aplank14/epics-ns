@@ -3,7 +3,7 @@
 $email = $mysqli->escape_string($_POST['email']);
 $result = $mysqli->query("SELECT * FROM $db.users WHERE email='$email'");
 
-if ($result->num_rows == 0){
+if ($result->num_rows != 1){
     $_SESSION['message'] = "User with that email doesn't exist!";
     header("location: error.php");
 }
@@ -29,11 +29,6 @@ else if($user['user_type']=="user")
     $_SESSION['logged_in'] = true;
 
     header("location: profile.php");
-}
-else
-{
-    $_SESSION['message']="Unexpected user type";
-    header("location: error.php");
 }
 
 ?>

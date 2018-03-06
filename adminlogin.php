@@ -44,7 +44,7 @@ $mysqli->query($update);
         <br>
         <a href="delete.php"><button class="button button-block" name="delete">Delete</button></a>
         <br>
-        <a href="logout.php"><button class="button button-block" name="logout">Log Out</button></a>
+        <a href="main.php"><button class="button button-block" name="logout">Log Out</button></a>
 
     </div>
 

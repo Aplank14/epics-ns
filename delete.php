@@ -52,6 +52,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
 
         </div>
 
+        <hr>
+        <a href="adminlogin.php"><button class="button button-block" name="back">Back</button></a>
+        
     </div>
 
 </body>

@@ -29,6 +29,8 @@ session_start();
             </tr>
         </table>
 
+        <hr>
+        <a href="adminlogin.php"><button class="button button-block" name="back">Back</button></a>
         
     </div>
 

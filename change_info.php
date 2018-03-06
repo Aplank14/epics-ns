@@ -71,6 +71,9 @@ if (isset($_POST['change_info'])) {
 
         </div>
 
+        <hr>
+        <a href="modify.php"><button class="button button-block" name="back">Back</button></a>
+        
     </div>    
 
 </body>
