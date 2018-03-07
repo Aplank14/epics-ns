@@ -1,7 +1,6 @@
 <?php
 
 require_once 'db.php';
-session_start();
 
 $old_email = $_SESSION["old_email"];
 

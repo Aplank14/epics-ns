@@ -22,7 +22,7 @@ $update = "INSERT INTO $db.users (id, first_name, last_name, email, user_type)
 if ($mysqli->query($update))
 {
     $_SESSION['message'] = 'New user added!';
-    header("location: success_add.php"); 
+    header("location: success.php"); 
 } 
 else 
 {

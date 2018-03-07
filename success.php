@@ -1,8 +1,8 @@
 <?php
 
-session_start();
-$success = "Success";
+require_once 'db.php';
 
+$success = "Success";
 if(isset($_SESSION['message']))
 {  
    $success = $_SESSION['message'];

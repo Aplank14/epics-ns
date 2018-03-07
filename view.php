@@ -1,7 +1,6 @@
 <?php
 
 require_once "db.php";
-session_start();
 
 $result = $mysqli->query("SELECT id, first_name, last_name, email, user_type, hours FROM $db.users")
 

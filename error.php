@@ -1,13 +1,11 @@
 <?php
 
-session_start();
-$error = "Unexpected Error";
+require_once 'db.php';
 
+$error = "Unexpected Error";
 if(isset($_SESSION['message']))
-{
-    
-    $error = $_SESSION['message'];
-    
+{  
+    $error = $_SESSION['message'];   
 }
 
 session_destroy();

@@ -1,16 +1,10 @@
 <?php 
 
 require_once 'db.php';
-session_start();
 
 if ( $_SESSION['logged_in'] != 1 ) {
 	$_SESSION['message'] = "You must log in";
 	header("location: error.php");    
-}
-
-if (isset($_POST['modify_user']))
-{
-    require_once 'change_info.php';   
 }
 
 ?>
@@ -36,7 +30,7 @@ if (isset($_POST['modify_user']))
             <form action="change_info.php" method="post" autocomplete="off">
             
                 <div class="field-wrap">                
-                    <input type="email" autocomplete="off" name="email" placeholder="Enter the email address" required />
+                    <input type="email" autocomplete="off" name="email" placeholder="Enter the email address" required >
                 </div>
 
                 <button class="button button-block" name="modify_user">Modify</button>

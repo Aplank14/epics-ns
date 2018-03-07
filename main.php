@@ -1,13 +1,7 @@
 ﻿<?php 
 
-session_start();
+require_once 'db.php';
 session_unset();
-require_once('db.php');
-
-if ($_SERVER['REQUEST_METHOD'] == 'POST') 
-{
-     require_once 'login.php';    
-}
 
 ?>
 
@@ -30,11 +24,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
             
             <h1>Welcome Back!</h1>
 
-            <form action="main.php" method="post" autocomplete="off">
+            <form action="login.php" method="post" autocomplete="off">
 
                 <div class="field-wrap">
                 
-                    <input type="email" required autocomplete="off" name="email" placeholder="Email Address*" required/>
+                    <input type="email" autocomplete="off" name="email" placeholder="Email Address" required>
                 
                 </div>
 

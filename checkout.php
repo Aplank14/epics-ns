@@ -1,7 +1,6 @@
 <?php
 
 require_once "db.php";
-session_start();
 
 $result = $mysqli->query("SELECT * FROM $db.users WHERE logged_in=1");
 
@@ -34,9 +33,9 @@ $result = $mysqli->query("SELECT * FROM $db.users WHERE logged_in=1");
         ?>
               
         </form>
-        
         <br>
         <hr>
+        <br>
         <a href="main.php"><button class="button button-block">Back</button></a>
         
     </div>

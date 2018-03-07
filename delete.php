@@ -1,22 +1,10 @@
 <?php 
 
 require_once 'db.php';
-session_start();
 
 if ( $_SESSION['logged_in'] != 1 ) {
 	$_SESSION['message'] = "You must log in";
 	header("location: error.php");    
-}
-
-if ($_SERVER['REQUEST_METHOD'] == 'POST') 
-{
-    if (isset($_POST['delete_user']))
-    {
-
-        require_once 'delete_php.php';
-        
-    }
-    
 }
 
 ?>
@@ -40,10 +28,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
             
             <h1>Delete User!</h1>
 
-            <form action="delete.php" method="post" autocomplete="off">
+            <form action="delete_php.php" method="post" autocomplete="off">
                 
                 <div class="field-wrap">
-                    <input type="email" autocomplete="off" name="email" placeholder="Email of the user to delete" required/>
+                    <input type="email" autocomplete="off" name="email" placeholder="Email of the user to delete" required>
                 </div>
 
                 <button class="button button-block" name="delete_user">Delete</button>

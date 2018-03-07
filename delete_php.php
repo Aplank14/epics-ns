@@ -17,12 +17,12 @@ $sql = "DELETE FROM $db.users WHERE email = '$email'";
 
 if ($mysqli->query($sql))
 {
-    $_SESSION['message'] = 'User delete!';
-    header("location: success_add.php"); 
+    $_SESSION['message'] = 'User deleted!';
+    header("location: success.php"); 
 }
 else 
 {
-    $_SESSION['message'] = 'Delete failed!';
+    $_SESSION['message'] = 'Deletion failed!';
     header("location: error.php"); 
 }
 

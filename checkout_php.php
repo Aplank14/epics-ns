@@ -1,7 +1,6 @@
 <?php
 
 require_once 'db.php';
-session_start();
 
 $id = key($_POST);
 
@@ -37,7 +36,6 @@ $hours = $hours + $diff->h;
 $update = "UPDATE $db.users SET logged_in = 0, hours = $hours, minutes = $minutes WHERE id =  '$id'";
 $mysqli->query($update);
 
-session_unset();
 $_SESSION['hours']= $diff;
 header ("Location: logout.php");
 

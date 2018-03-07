@@ -1,5 +1,7 @@
 <?php
 
+require_once "db.php";
+
 $email = $mysqli->escape_string($_POST['email']);
 $result = $mysqli->query("SELECT * FROM $db.users WHERE email='$email'");
 

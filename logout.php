@@ -1,5 +1,6 @@
 <?php
-session_start();
+
+require_once 'db.php';
 $hours = $_SESSION['hours'];
 session_destroy();
 
