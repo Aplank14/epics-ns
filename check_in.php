@@ -39,10 +39,10 @@ session_destroy();
         <h1>
             You have been checked in 
             <br>
-            <?= $first_name.' '.$last_name ?>
+            <?= $first_name.' '.$last_name ?>!
         </h1>
               
-        <p>Don't forget to check out when you go!</p>
+        <p>Don't forget to check out when you go.</p>
           
         <a href="main.php"><button class="button button-block">Home</button></a>
 

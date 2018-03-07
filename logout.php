@@ -1,7 +1,8 @@
 <?php
 session_start();
-session_unset();
-session_destroy(); 
+$hours = $_SESSION['hours'];
+session_destroy();
+
 ?>
 
 <!DOCTYPE html>
@@ -17,9 +18,9 @@ session_destroy();
 <body>
     <div class="form">
         
-          <h1>Thanks for stopping by</h1>
+          <h1>Thanks for stopping by!</h1>
               
-          <p>You have been logged out!</p>
+          <p>You were here for <?=$hours->h?> hours and <?=$hours->i?> minutes</p>
           
           <a href="main.php"><button class="button button-block">Home</button></a>
 

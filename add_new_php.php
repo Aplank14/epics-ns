@@ -1,4 +1,5 @@
 <?php
+
 require_once 'db.php';
 
 $id = $_POST["id"];
@@ -7,8 +8,7 @@ $last_name = $_POST['last_name'];
 $email = $_POST['email'];
 $user_type = $_POST['user_type'];
 
-$test = "SELECT * FROM $db.users WHERE email= '$email'";
-$result = $mysqli->query($test);
+$result = $mysqli->query("SELECT * FROM $db.users WHERE email= '$email'");
 $user = $result->fetch_assoc();
 
 if ($result->num_rows!=0) {
@@ -16,7 +16,8 @@ if ($result->num_rows!=0) {
     header("location: error.php");
 }
 
-$update = "INSERT INTO " . $db .".users (id, first_name, last_name, email, user_type) VALUES ($id, '$first_name', '$last_name', '$email', '$user_type')";
+$update = "INSERT INTO $db.users (id, first_name, last_name, email, user_type) 
+                                VALUES ($id, '$first_name', '$last_name', '$email', '$user_type')";
 
 if ($mysqli->query($update))
 {

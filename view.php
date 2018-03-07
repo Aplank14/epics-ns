@@ -24,26 +24,26 @@ $result = $mysqli->query("SELECT id, first_name, last_name, email, user_type, ho
         <h1>Users</h1>
         <table>
             <tr>
-                <td>ID</td>
-                <td>Name</td>
-                <td>Email</td>
-                <td>Hours</td>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Hours</th>
             </tr>
             <?php
                 
                 while($row = $result->fetch_assoc()) {
-                    echo "<tr>";
                     if ($row['user_type']=='admin'){
                         continue;
                     }
+                    echo "<tr>";
                     $output = "<td>$row[id]</td><td>$row[first_name] $row[last_name]</td><td>$row[email]</td><td>$row[hours]</td>";
                     echo $output;
-                    echo "<tr>";
+                    echo "</tr>";
                 }
             ?>
         </table>
-
-        <hr>
+                
+        <br>
         <a href="adminlogin.php"><button class="button button-block" name="back">Back</button></a>
         
     </div>

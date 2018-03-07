@@ -68,18 +68,28 @@ a:hover {
 }
 
 table{
-    border: 1px solid black;
-    border-collapse: collapse;
-    padding: 10px;
-    color: white;
+  width: 100%;
+  border-collapse: collapse;
+  color: white;
+  font-size: 20px;
 }
 
-td{
-    color: white;
+th {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  text-align: left;
+  color: #1ab188;
+  border-bottom: white;
 }
 
-tr{
-    color: white;
+tr, td{
+  text-align: left;
+  color: white;
+  border-collapse: collapse;
+}
+
+tr:not(:first-child):hover {
+  background-color: gray;
 }
 
 h1 {

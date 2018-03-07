@@ -32,7 +32,7 @@ else if($user['user_type']=="user")
     $_SESSION['last_name'] = $user['last_name'];
     $_SESSION['logged_in'] = true;
 
-    header("location: profile.php");
+    header("location: check_in.php");
 }
 
 ?>

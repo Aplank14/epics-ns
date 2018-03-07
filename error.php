@@ -10,7 +10,6 @@ if(isset($_SESSION['message']))
     
 }
 
-session_unset();
 session_destroy();
 
 ?>
