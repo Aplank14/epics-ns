@@ -16,8 +16,8 @@ $time_stamp = date("Y-m-d H:i:s");
 $update = 'UPDATE '. DB .".users SET login_time = '$time_stamp', logged_in = 1 WHERE email =  '$email'";
 $mysqli->query($update);
 
-session_unset();
-session_destroy(); 
+//session_unset();
+//session_destroy(); 
 
 ?>
 
@@ -44,6 +44,13 @@ session_destroy();
         <p>Don't forget to check out when you go.</p>
           
         <a href="main.php"><button class="button button-block">Home</button></a>
+        
+        <br>
+        <br>
+        <br>
+        <br>
+        
+        <a href="change_pass_info.php"><button class="button button-block">Change Password?</button></a>
 
     </div>
 

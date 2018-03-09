@@ -9,13 +9,15 @@ $first_name = $_POST["first_name"];
 $last_name = $_POST["last_name"];
 $email = $_POST["email"];
 $user_type = $_POST["user_type"];
+$location = $_POST["location"];
 
 $sql = 'UPDATE'. DB .".users SET 
                             id = '$id', 
                             first_name = '$first_name', 
                             last_name = '$last_name', 
                             email = '$email', 
-                            user_type = '$user_type' 
+                            user_type = '$user_type',
+                            location = '$location'
                         WHERE email = '$old_email'";
 
 if ($mysqli->query($sql))

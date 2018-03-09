@@ -1,4 +1,4 @@
-﻿<?php 
+﻿﻿<?php 
 
 require_once 'db.php';
 session_unset();
@@ -29,7 +29,13 @@ session_unset();
                 <div class="field-wrap">
                 
                     <input type="email" autocomplete="off" name="email" placeholder="Email Address" required>
+                    
+                </div>
                 
+                <div class="field-wrap">
+                
+                    
+                    <input type="password" autocomplete="off" name="pass" placeholder="Password" required>
                 </div>
 
                 <button class="button button-block" name="login">Check In</button>
