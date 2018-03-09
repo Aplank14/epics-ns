@@ -34,16 +34,21 @@ $mysqli->query($update);
         <h1>Welcome Admin</h1>
         
         <h2><?="$first_name $last_name"?></h2>
-
+        <br>
+        <br>
         <a href="add_new.php"><button class="button button-block" name="add_new">Add New</button></a>
         <br>
         <a href="modify.php"><button class="button button-block" name="modify">Modify</button></a>
         <br>
-        <a href="view.php"><button class="button button-block" name="view">View</button></a>
-        <br>
         <a href="delete.php"><button class="button button-block" name="delete">Delete</button></a>
         <br>
+        <a href="view.php"><button class="button button-block" name="view">View All Users</button></a>
+        <br>
+        <a href="view_admin.php"><button class="button button-block" name="view">View All Admins</button></a>
+        <br>
         <a href="main.php"><button class="button button-block" name="logout">Log Out</button></a>
+        <br>
+        
 
     </div>
 

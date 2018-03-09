@@ -20,7 +20,7 @@ $result = $mysqli->query('SELECT id, first_name, last_name, email, user_type, ho
 
     <div class="form">
 
-        <h1>Users</h1>
+        <h1>Admins</h1>
         <table>
             <tr>
                 <th>ID</th>
@@ -32,7 +32,7 @@ $result = $mysqli->query('SELECT id, first_name, last_name, email, user_type, ho
             <?php
                 
                 while($row = $result->fetch_assoc()) {
-                    if ($row['user_type']=='admin'){
+                    if ($row['user_type']=='user'){
                         continue;
                     }
                     echo "<tr>";
@@ -40,7 +40,6 @@ $result = $mysqli->query('SELECT id, first_name, last_name, email, user_type, ho
                     echo $output;
                     echo "</tr>";
                 }
-                
             ?>
         </table>
                 

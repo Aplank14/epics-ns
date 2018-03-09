@@ -45,15 +45,20 @@ if ( $_SESSION['logged_in'] != 1 ) {
                 <div class="field-wrap">
                     <input type="email" autocomplete="off" name="email" placeholder="Email Address" required>
                 </div>
+                
+                <div class="field-wrap">
+                    <input type="text" autocomplete="off" name="pass" placeholder="Password" required>
+                </div>
 
                 <div class="field-wrap">
                     <input type="text" autocomplete="off" name="user_type" value="user" required>
                 </div>
+                
+                <div class="field-wrap">
+                    <input type="text" autocomplete="on" name="location" placeholder="Location" required>
+                </div>
 
-                <!--<div class="field-wrap">
-                    <input type="radio" name="user_type" value="admin" checked>Admin
-                    <input type="radio" name="user_type" value="user">User
-                </div>-->
+                
 
                 <button class="button button-block" name="add_new">Add</button>
 

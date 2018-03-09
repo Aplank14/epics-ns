@@ -15,6 +15,7 @@ $id = $user["id"];
 $first_name = $user["first_name"];
 $last_name = $user["last_name"];
 $user_type = $user["user_type"];
+$location = $user["location"];
 
 ?>
 
@@ -57,6 +58,13 @@ $user_type = $user["user_type"];
 
                 <div class="field-wrap">
                     <input type="text" autocomplete="off" name="user_type" value=<?="$user_type" ?> required>
+                </div>
+                
+                <div class="field-wrap">
+                                       
+                    <input type="text" autocomplete="on" name="location" value=<?="$location" ?> >
+                    
+                    
                 </div>
 
                 <button class="button button-block" name="change_info">Change</button>
