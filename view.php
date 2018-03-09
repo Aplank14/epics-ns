@@ -39,6 +39,7 @@ $result = $mysqli->query('SELECT id, first_name, last_name, email, user_type, ho
                     echo $output;
                     echo "</tr>";
                 }
+                
             ?>
         </table>
                 
