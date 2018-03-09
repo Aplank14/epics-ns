@@ -3,7 +3,7 @@
 require_once "db.php";
 
 $email = $mysqli->escape_string($_POST['email']);
-$result = $mysqli->query("SELECT * FROM $db.users WHERE email='$email'");
+$result = $mysqli->query('SELECT * FROM '. DB .".users WHERE email='$email'");
 
 if ($result->num_rows != 1){
     $_SESSION['message'] = "User with that email doesn't exist!";

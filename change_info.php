@@ -9,7 +9,7 @@ if ( $_SESSION['logged_in'] != 1 ) {
 
 $email = $_POST["email"];
 $_SESSION["old_email"]=$email;
-$result = $mysqli->query("SELECT * FROM $db.users WHERE email='$email'");
+$result = $mysqli->query('SELECT * FROM '. DB .".users WHERE email='$email'");
 $user = $result->fetch_assoc();
 $id = $user["id"];
 $first_name = $user["first_name"];

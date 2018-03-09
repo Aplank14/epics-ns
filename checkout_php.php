@@ -4,7 +4,7 @@ require_once 'db.php';
 
 $id = key($_POST);
 
-$results = $mysqli->query("SELECT hours, minutes FROM $db.users WHERE id = '$id'")->fetch_assoc();
+$results = $mysqli->query('SELECT hours, minutes FROM '. DB .".users WHERE id = '$id'")->fetch_assoc();
 $hours = $results['hours'];
 $minutes = $results['minutes'];
 
@@ -16,7 +16,7 @@ if ($minutes == NULL){
     $minutes = 0;
 }
 
-$results = $mysqli->query("SELECT login_time FROM $db.users WHERE id = '$id'")->fetch_assoc();
+$results = $mysqli->query('SELECT login_time FROM '. DB .".users WHERE id = '$id'")->fetch_assoc();
 $old = date_create($results['login_time']);
 
 $time_stamp = date("Y-m-d H:i:s", time());
@@ -33,7 +33,7 @@ if ($diff->i+$minutes>=60){
 
 $hours = $hours + $diff->h;
 
-$update = "UPDATE $db.users SET logged_in = 0, hours = $hours, minutes = $minutes WHERE id =  '$id'";
+$update = 'UPDATE '. DB .".users SET logged_in = 0, hours = $hours, minutes = $minutes WHERE id =  '$id'";
 $mysqli->query($update);
 
 $_SESSION['hours']= $diff;

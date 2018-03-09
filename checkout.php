@@ -2,7 +2,7 @@
 
 require_once "db.php";
 
-$result = $mysqli->query("SELECT * FROM $db.users WHERE logged_in=1");
+$result = $mysqli->query('SELECT * FROM '. DB .".users WHERE logged_in=1");
 
 ?>
 

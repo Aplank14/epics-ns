@@ -2,7 +2,7 @@
 
 require_once "db.php";
 
-$result = $mysqli->query("SELECT id, first_name, last_name, email, user_type, hours FROM $db.users")
+$result = $mysqli->query('SELECT id, first_name, last_name, email, user_type, hours FROM '. DB .'.users');
 
 ?>
 

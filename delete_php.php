@@ -3,7 +3,7 @@
 require_once 'db.php';
 
 $email = $_POST["email"];
-$result = $mysqli->query("SELECT * FROM $db.users WHERE email='$email'");
+$result = $mysqli->query('SELECT * FROM '. DB .".users WHERE email='$email'");
 
 if ( $result->num_rows == 0 ) 
 { 
@@ -13,7 +13,7 @@ if ( $result->num_rows == 0 )
  
 }
 
-$sql = "DELETE FROM $db.users WHERE email = '$email'";
+$sql = 'DELETE FROM '. DB .".users WHERE email = '$email'";
 
 if ($mysqli->query($sql))
 {

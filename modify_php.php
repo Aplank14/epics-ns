@@ -10,7 +10,7 @@ $last_name = $_POST["last_name"];
 $email = $_POST["email"];
 $user_type = $_POST["user_type"];
 
-$sql = "UPDATE $db.users SET 
+$sql = 'UPDATE'. DB .".users SET 
                             id = '$id', 
                             first_name = '$first_name', 
                             last_name = '$last_name', 

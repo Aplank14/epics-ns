@@ -13,7 +13,7 @@ $last_name = $_SESSION['last_name'];
 $email = $_SESSION['email'];
 $time_stamp = date("Y-m-d H:i:s");
 
-$update = "UPDATE $db.users SET login_time = '$time_stamp', logged_in = 1 WHERE email =  '$email'";
+$update = 'UPDATE '. DB .".users SET login_time = '$time_stamp', logged_in = 1 WHERE email =  '$email'";
 $mysqli->query($update);
 
 session_unset();

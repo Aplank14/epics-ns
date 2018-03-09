@@ -3,10 +3,11 @@
 session_start();
 date_default_timezone_set ("America/New_York");
 
-$host = 'localhost';
-$user = 'root';
-$pass = '';
-$db = 'accounts';
-$mysqli = new mysqli($host,$user,$pass,$db) or die($mysqli->error);
+define('HOST','localhost');
+define('USER','root');
+define('PASS','');
+define('DB','accounts');
+
+$mysqli = new mysqli(HOST,USER,PASS,DB) or die($mysqli->error);
 
 ?>
