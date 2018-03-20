@@ -38,5 +38,6 @@ $mysqli->query($update);
 
 $_SESSION['hours']= $diff;
 header ("Location: logout.php");
+exit(0);
 
 ?>
