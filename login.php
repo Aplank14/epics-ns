@@ -1,6 +1,7 @@
 <?php
 
 require_once "db.php";
+session_unset();
 
 $email = $mysqli->escape_string($_POST['email']);
 $result = $mysqli->query('SELECT * FROM '. DB .".users WHERE email='$email'");

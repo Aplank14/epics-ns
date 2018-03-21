@@ -56,7 +56,7 @@ session_destroy();
               
         <p>Don't forget to check out when you go.</p>
           
-        <a href="main.php"><button class="button button-block">Home</button></a>
+        <a href="index.html"><button class="button button-block">Home</button></a>
         
     </div>
 

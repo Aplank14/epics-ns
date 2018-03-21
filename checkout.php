@@ -1,6 +1,7 @@
 <?php
 
 require_once "db.php";
+session_unset();
 
 $result = $mysqli->query('SELECT * FROM '. DB .".users WHERE logged_in=1");
 
@@ -36,7 +37,7 @@ $result = $mysqli->query('SELECT * FROM '. DB .".users WHERE logged_in=1");
         <br>
         <hr>
         <br>
-        <a href="main.php"><button class="button button-block">Back</button></a>
+        <a href="index.html"><button class="button button-block">Back</button></a>
         
     </div>
 

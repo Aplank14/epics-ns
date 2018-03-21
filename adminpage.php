@@ -40,7 +40,7 @@ $email = $_SESSION['email'];
         <br>
         <a href="view.php"><button class="button button-block" name="view">View</button></a>
         <br>
-        <a href="main.php"><button class="button button-block" name="logout">Home</button></a>
+        <a href="index.html"><button class="button button-block" name="logout">Home</button></a>
         <br>
         
 
