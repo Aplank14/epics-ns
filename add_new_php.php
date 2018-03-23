@@ -31,7 +31,7 @@ if ($admin)
 }
 
 $update =   'INSERT INTO '. DB .".users (id, first_name, last_name, email, password, admin) 
-                                    VALUES ($id, '$first_name', '$last_name', '$email', '$pass', $admin); " .
+                                    VALUES ('$id', '$first_name', '$last_name', '$email', '$pass', $admin); " .
             'CREATE TABLE '. DB .".`$id` (logins DATETIME);";
 
 if ($mysqli->multi_query($update)){

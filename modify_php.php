@@ -45,10 +45,10 @@ $update =   'UPDATE '. DB .".users SET
                                 last_name = '$last_name', 
                                 email = '$email', 
                                 password = '$pass',
-                                admin = $admin'
+                                admin = $admin
                             WHERE email = '$old_email'; " .
             'ALTER TABLE ' . DB . ".`$old_id` RENAME TO " . DB . ".`$id`";
-            
+
 if ($mysqli->multi_query($update))
 {
     $_SESSION['message'] = 'User modified!';
