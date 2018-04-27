@@ -27,12 +27,14 @@ $pass = NULL;
 
 if ($admin)
 {
+    //Hashes the password so it can be safely stored in the database
     $pass = password_hash($_POST['password'], PASSWORD_BCRYPT);
 }
 
-$update =   'INSERT INTO '. DB .".users (id, first_name, last_name, email, password, admin) 
-                                    VALUES ('$id', '$first_name', '$last_name', '$email', '$pass', $admin); " .
-            'CREATE TABLE '. DB .".`$id` (logins DATETIME);";
+//Add the user to the main table and create a unique login table
+$update =   'INSERT INTO '. DB .".users (id, first_name, last_name, email, password, admin, logged_in) 
+                                    VALUES ('$id', '$first_name', '$last_name', '$email', '$pass', $admin, b'0'); " .
+            'CREATE TABLE '. DB .".`$id` (`$id` DATETIME);";
 
 if ($mysqli->multi_query($update)){
     $_SESSION['New user added'];

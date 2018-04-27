@@ -11,6 +11,7 @@ if ( $_SESSION['logged_in'] != 1 ) {
 $email = $_POST["email"];
 $_SESSION["old_email"]=$email;
 
+//Get the current user data from the table
 $result = $mysqli->query('SELECT * FROM '. DB .".users WHERE email='$email'");
 $user = $result->fetch_assoc();
 $id = $user["id"];
@@ -35,7 +36,7 @@ $admin = $user["admin"];
 
 <script>
 function openTab(evt, content) {
-    // Declare all variables
+    
     var i, tabcontent, tablinks;
 
     // Get all elements with class="tabcontent" and hide them

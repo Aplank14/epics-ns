@@ -25,7 +25,7 @@ if ( $_SESSION['logged_in'] != 1 ) {
     
     <script>
         function openTab(evt, content) {
-            // Declare all variables
+            
             var i, tabcontent, tablinks;
 
             // Get all elements with class="tabcontent" and hide them

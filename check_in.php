@@ -24,10 +24,10 @@ $time_stamp = date("Y-m-d H:i:s");
 
 $location = location($_SERVER['REMOTE_ADDR']);
 
-$update = 'UPDATE '. DB .".users SET login_time = '$time_stamp', location = '$location', logged_in = 1 WHERE email =  '$email'";
+$update = 'UPDATE '. DB .".users SET login_time = '$time_stamp', location = '$location', logged_in = b'1' WHERE email =  '$email'";
 $mysqli->query($update);
 
-$update = 'INSERT INTO ' .DB. ".`$id` (logins) VALUES ('$time_stamp')";
+$update = 'INSERT INTO ' .DB. ".`$id` (`$id`) VALUES ('$time_stamp')";
 $mysqli->query($update);
 
 session_destroy(); 

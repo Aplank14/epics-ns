@@ -3,7 +3,7 @@
 require_once "db.php";
 session_unset();
 
-$result = $mysqli->query('SELECT * FROM '. DB .".users WHERE logged_in=1");
+$result = $mysqli->query('SELECT * FROM '. DB .".users WHERE logged_in=b'1'");
 
 ?>
 

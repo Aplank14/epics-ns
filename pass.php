@@ -6,6 +6,7 @@
     $result = $mysqli->query($update);
     $dbpass = $result->fetch_assoc();
 
+    //Verify the hashed password
     if(password_verify($pass, $dbpass['password']))
     {
         header("location: adminpage.php");

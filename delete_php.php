@@ -23,6 +23,7 @@ if ( $result->num_rows == 0 )
 $user = $result->fetch_assoc();
 $id = $user['id'];
 
+//Remove the user from the main table and delete their login table
 $update = 'DELETE FROM '. DB .".users WHERE email = '$email'; " .
             'DROP TABLE '. DB . ".`$id`;";
 

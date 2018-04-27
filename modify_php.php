@@ -36,9 +36,11 @@ $pass = NULL;
 
 if ($admin)
 {
+    //Hash the password for storing in the database
     $pass = password_hash($_POST['password'], PASSWORD_BCRYPT);
 }
 
+//Update the user information and alter the login table
 $update =   'UPDATE '. DB .".users SET 
                                 id = '$id', 
                                 first_name = '$first_name', 
